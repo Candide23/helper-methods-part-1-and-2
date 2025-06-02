@@ -1,9 +1,7 @@
 class MoviesController < ApplicationController
   def new
     @the_movie = Movie.new
-
-    render template: "movies/new"
-  end
+    end
 
   def index
     matching_movies = Movie.all
@@ -38,7 +36,7 @@ class MoviesController < ApplicationController
 
     if @the_movie.valid?
       @the_movie.save
-      redirect_to("/movies", { notice: "Movie was successfully created." })
+      redirect_to(movies_url, { :notice => "Movie was successfully created." })
     else
       render template: "movies/new"
     end

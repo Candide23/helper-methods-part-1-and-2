@@ -4,11 +4,8 @@
 
 <hr>
 
-<div>
-<%= root_path %></div>
 
-<div>
-  <a href="/movies/new">New movie</a>
+  <a href="<%= new_movie_path %>">New movie</a>
 </div>
 
 <hr>
@@ -61,8 +58,8 @@
     </td>
 
     <td>
-      <a href="/movies/<%= a_movie.id %>">
-        Show details
+<a href="<%= movie_path(a_movie.id) %>">
+          Show details
       </a>
     </td>
   </tr>
